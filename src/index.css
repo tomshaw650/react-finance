@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components { 
+  .middle-header {
+    @apply border-b-1 border-stone-100 pb-4;
+  }
+}
+
+* {
+  @apply box-border;
+}
+
 body {
-  @apply bg-gray-200;
+  @apply bg-gray-200 flex flex-col items-center justify-center min-h-screen m-0;
+}
+
+/* dynamic elements need manual styling */
+.list li {
+  @apply bg-white shadow-slate-200 text-gray-900 flex justify-between relative p-2.5 my-2.5 mx-0;
+}
+
+.list li.plus {
+  @apply border-r-8 border-green-500;
+}
+
+.list li.minus {
+  @apply border-r-8 border-red-500;
 }
